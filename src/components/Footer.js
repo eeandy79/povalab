@@ -29,6 +29,7 @@ const Footer = class extends React.Component {
                         Home
                       </Link>
                     </li>
+                    {/*
                     <li>
                       <Link className="navbar-item" to="/about">
                         About
@@ -44,6 +45,7 @@ const Footer = class extends React.Component {
                         Form Examples
                       </Link>
                     </li>
+                    */}
                     <li>
                       <a
                         className="navbar-item"
@@ -74,6 +76,7 @@ const Footer = class extends React.Component {
                 </section>
               </div>
               <div className="column is-4 social">
+                {/*
                 <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
@@ -103,6 +106,7 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
+                */}
               </div>
             </div>
           </div>
