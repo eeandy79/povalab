@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
                     <p>{mainpitch.description}</p>
                   </div>
                 </div>
-                <div className="columns">
+                <div className="columns mt-5">
                   <div className="column is-12">
                     <h1 className="title">
                       {heading}
