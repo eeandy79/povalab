@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Experimenting a low cost startup
+title: Experimenting a startup
 image: /img/sl.031121.41400.47.jpg
 heading: What we are going to do?
 subheading: Is it work as some people said?
@@ -25,7 +25,8 @@ intro:
       text: |
         Cloud solution consultancy e.g. K8S, AWS, Azure etc.
     - image: /img/tutorials.png
-      text: Software management consultancy e.g. CI/CD
+      text: "Software management consultancy e.g. CI/CD, DevOps, SRE, and Platform
+        Engineering "
     - image: /img/meeting-space.png
       text: Frontend development e.g. web, native mobile application etc.
   heading: What we offer
