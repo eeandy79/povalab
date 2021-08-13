@@ -6,8 +6,10 @@ description: Start your self-hosted blog in 30 minutes
 featuredpost: false
 featuredimage: /img/blog.jpg
 tags:
-  - flavor
-  - tasting
+  - Netify
+  - Gatsby
+  - CMS
+  - Blog
 ---
 ![flavor wheel](/img/blog.jpg)
 
@@ -94,6 +96,10 @@ Finally, check in the fix and we are ready to host it to Netify.
 
 ## Step 4 - Host your site to Netify
 
-In your current GitHub project, find and click **"Deploy to Netlify"** and then click **"Connect to GitHub"** and **"Authorize netlify"**
+Login [Netify](https://app.netlify.com/) with your GitHub account. On the Team overview page below; click **"New site from Git"** to create a new site as below. Select **GitHub**
 
-![](/img/step2.jpg)
+![](/img/step2b.jpg)
+
+Pick the newly created repository in GitHub to continue; in my case that is myblog. After that click **"Deploy site"** and Netify will start building and deploying your site. From now on, as far as you have new commit to this project on GitHub; Netify will automatically trigger a new build and deploy base on your latest code.
+
+![](/img/step2c.jpg)
