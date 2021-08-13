@@ -6,7 +6,7 @@ description: Start your self-hosted blog in 30 minutes
 featuredpost: false
 featuredimage: /img/blog.jpg
 tags:
-  - Netify
+  - Netlify
   - Gatsby
   - CMS
   - Blog
@@ -85,7 +85,6 @@ To this:
         indentedSyntax: true
       }
     },
-
 ```
 
 Run **"gatsby develop --host=0.0.0.0"** now you should see the site up and running at port 8000
@@ -103,3 +102,11 @@ Login [Netify](https://app.netlify.com/) with your GitHub account. On the Team o
 Pick the newly created repository in GitHub to continue; in my case that is myblog. After that click **"Deploy site"** and Netify will start building and deploying your site. From now on, as far as you have new commit to this project on GitHub; Netify will automatically trigger a new build and deploy base on your latest code.
 
 ![](/img/step2c.jpg)
+
+After a while you will see your new project been deployed on Netlify CDN. In my case, the site can be accessed at [https://adoring-franklin-585280.netlify.app](https://adoring-franklin-585280.netlify.app/)
+
+![](/img/step2d.jpg)
+
+## Summary
+
+In this article, we go through the steps to bring up a gatsby template with CMS support on Netlify. It's quick, nearly no code so far (except a bug fix on config file) and most important **"it's free"**. In the next article, we are going to talk about how to setup Netlify-CMS to manage the blog e.g. create, modify articles like what I am doing right now.
