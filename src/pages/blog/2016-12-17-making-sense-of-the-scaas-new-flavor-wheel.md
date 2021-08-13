@@ -1,33 +1,99 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
+title: Start your self-hosted blog in 30 minutes
 date: 2016-12-17T15:04:10.000Z
+description: Start your self-hosted blog in 30 minutes
 featuredpost: false
-featuredimage: /img/flavor_wheel.jpg
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+featuredimage: /img/blog.jpg
 tags:
   - flavor
   - tasting
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+![flavor wheel](/img/blog.jpg)
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+The first thing we gonna do is to have a website with following requirements
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+* No cost in hosting the site
+* Quick to build e.g. with 30 minutes
+* Headless CMS for blogging 
 
-## What the updates mean to you
+To achieve the above requirement, below is the technical stack
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+* [Netify](https://www.netlify.com/) for hosting which include headless CMS for our blogging support
+* [Gatsby](https://www.gatsbyjs.com/) framework base on [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms) template
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
+Below is the step by step guide to bring up the site.
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
+## Step 1 - Setup the development environment
 
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
+My development environment is Ubuntu 20.04. To proceed we need the following installed in our development environment
 
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+* Please follow [here](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/) to install nodejs and npm
+* Install gatsby-cli by **"sudo npm install -g gatsby-cli"**
+* Please follow [here](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to access your GitHub account
+
+## Step 2 - Checkout the template to GitHub
+
+Login to your github account (and create one if needed) and go to [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms). 
+
+* Check **"Use this template"** to add the project to your repository
+
+![](/img/step1.jpg)
+
+* Fill-in the **"Repository name"** and click **"Create repository from template"**
+
+![](/img/step1b.jpg)
+
+## Step 3 - Checkout and build
+
+To make sure the template work as expected. Checkout and build the template
+
+* git clone git@github.com:eeandy79/myblog.git
+* cd myblog
+* npm install
+
+The build and start the website by **"gatsby develop --host=0.0.0.0"**. Sadly, you will see this in your console.
+
+![](/img/step1c.jpg)
+
+To fix this open gatsby-config.js and replace 'gatsby-plugin-sass' in below:
+
+```
+plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
+      },
+    },
+```
+
+To this:
+
+```
+ plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        indentedSyntax: true
+      }
+    },
+
+```
+
+Run **"gatsby develop --host=0.0.0.0"** now you should see the site up and running at port 8000
+
+![](/img/step1d.jpg)
+
+Finally, check in the fix and we are ready to host it to Netify.
+
+## Step 4 - Host your site to Netify
+
+In your current GitHub project, find and click **"Deploy to Netlify"** and then click **"Connect to GitHub"** and **"Authorize netlify"**
+
+![](/img/step2.jpg)
