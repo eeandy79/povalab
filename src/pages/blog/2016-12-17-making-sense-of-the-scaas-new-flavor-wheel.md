@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Start your self-hosted blog in 30 minutes
-date: 2016-12-17T15:04:10.000Z
+date: 2021-08-13T08:55:36.505Z
 description: Start your self-hosted blog in 30 minutes
 featuredpost: false
 featuredimage: /img/blog.jpg
