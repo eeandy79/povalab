@@ -11,7 +11,7 @@ tags:
   - CMS
   - Blog
 ---
-![flavor wheel](/img/blog.jpg)
+![](/img/blog.jpg)
 
 The first thing we gonna do is to have a website with following requirements
 
