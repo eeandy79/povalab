@@ -78,5 +78,11 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ["G-CPMP5YWW1L"]
+      },
+    }
   ],
 }
