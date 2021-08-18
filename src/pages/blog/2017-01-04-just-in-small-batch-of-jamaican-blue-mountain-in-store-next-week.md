@@ -33,4 +33,29 @@ The idea of Netlify-CMS is to check-in all updates eg. contents, images to your 
        deleteMedia: '[skip ci] Delete “{{path}}”'
    ```
 
-## Step 2 - Enable Netlify Identity and
+## Step 2 - Enable Netlify Identity and Git Gateway
+
+Go to your Netlify project / Identify and click **"Enable Identify"** and then click **"Invite users"**. Enter your email address and you will receive invitation email shortly. Complete the registration.
+
+![](/img/netlify_cms_step1.jpg)
+
+Click **"Settings and usage"**
+
+![](/img/netlify_cms_step3.jpg)
+
+Then scroll down to **Services/Git Gateway** click **"Enable Git Gateway"**
+
+![](/img/netlify_cms_step4.jpg)
+
+## Step 3 - Login Netlify CMS
+
+![](/img/netlify_cms_step2.jpg)
+
+Now you are ready to login to Netify-CMS and start manage your content at
+
+* https://***yournetlifydomain***/admin
+* in my case it is *https://adoring-franklin-585280.netlify.app/admin*
+
+After login success, boom here it is and you are start managing your content now.
+
+![](/img/netlify_cms_step5.jpg)
