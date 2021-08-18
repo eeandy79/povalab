@@ -59,3 +59,11 @@ Now you are ready to login to Netify-CMS and start manage your content at
 After login success, boom here it is and you are start managing your content now.
 
 ![](/img/netlify_cms_step5.jpg)
+
+## Summary
+
+In this article, we have gone though how to setup/connect Netlify CMS to your blog site. My experience so far is quite simple and quick to setup. Most importantly is the whole setup is **FREE.**
+
+One comment using Netlify-CMS is remember to "Publish" even if it's a working version and there's no "save" function. I have been failed to "Publish" this article once due to JWT expired and I have to rewrite it; so remember to "Publish" frequently so you won't step into this "hole"
+
+Thanks for reading. Please drop me an email at povalab@gmail.com for any comment. I am very happy to hear any feedback from you.
