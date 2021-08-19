@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Start your self-hosted blog in 30 minutes
 date: 2021-08-19T06:22:52.592Z
 description: Start your self-hosted blog in 30 minutes
-featuredpost: false
+featuredpost: true
 featuredimage: /img/blog.jpg
 tags:
   - Netlify
