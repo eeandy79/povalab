@@ -9,6 +9,7 @@ featuredimage: /img/ga.jpg
 tags:
   - google-analytic
   - helmet
+  - seo
 ---
 ![](/img/ga.jpg)
 
@@ -65,3 +66,9 @@ The Helmet data will be shown to the google analytic result as well. Looking at 
 To use Helmet is pretty easy e.g. for the original template code I am using; it doesn't have a good Helmet for index-page.js. I enhance it by add line 4 and line 20 to 26.
 
 ![](/img/ga_step7.jpg)
+
+## Summary
+
+In this article, we have go through how to add google-analytic for site monitoring and basic SEO via Helmet plugin.
+
+Thanks for reading. Please send me an email at povalab@gmail.com for any comment.
