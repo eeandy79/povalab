@@ -27,3 +27,30 @@ Then click **Add stream** and select **Web.** Fill in your site url and stream n
 After that select the newly created data stream and you will use the **"measurement ID"** which will be used to setup your site's configuration in next session.
 
 ![](/img/ga_step3.jpg)
+
+## Step 2 - Install and setup google-analytic plugin
+
+Go to your development environment, add and install google-analytic plugin to your site by 
+
+1. open package.json and add "gatsby-plugin-google-gtag": "^3.10.0" to the configuration file
+2. npm install
+
+Open and add the following gasby-config.js where the trackingIds is the **"measurement ID"** we got in Step 1.
+
+```
+{
+  resolve: 'gatsby-plugin-google-gtag',
+  options: {
+    trackingIds: ["G-CPMP5YWW1L"]
+  },
+}
+
+```
+
+Commit the change and after Netlify build and deploy your latest changes your site will be able to be keep tracked by google-analytic. Open your site and you will see it will keep firing event to google-analytic backend.
+
+![](/img/ga_step4.jpg)
+
+Go to [https://analytics.google.com](https://analytics.google.com/) you will see the analytic result. I am amazed I already see some traffic to my site with two days as below
+
+![](/img/ga_step5.jpg)
