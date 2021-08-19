@@ -44,7 +44,6 @@ Open and add the following gasby-config.js where the trackingIds is the **"measu
     trackingIds: ["G-CPMP5YWW1L"]
   },
 }
-
 ```
 
 Commit the change and after Netlify build and deploy your latest changes your site will be able to be keep tracked by google-analytic. Open your site and you will see it will keep firing event to google-analytic backend.
@@ -54,3 +53,15 @@ Commit the change and after Netlify build and deploy your latest changes your si
 Go to [https://analytics.google.com](https://analytics.google.com/) you will see the analytic result. I am amazed I already see some traffic to my site with two days as below
 
 ![](/img/ga_step5.jpg)
+
+## Step 3 - Using Helmet for SEO
+
+The [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms) template I am using already got gatsby-plugin-react-helmet installed. What Helmet do is to embed information to the HTML page to enable easier search by google bot. When you view your HTML source with Helmet data you will see the following.
+
+![](/img/ga_step6.jpg)
+
+The Helmet data will be shown to the google analytic result as well. Looking at the google analytic report example in last session; we can see **"Start your self...minutes | Blog"** in the **"PAGE TITLE AND SCREEN..."** session. This helps us understand visitor's behavior on our site.
+
+To use Helmet is pretty easy e.g. for the original template code I am using; it doesn't have a good Helmet for index-page.js. I enhance it by add line 4 and line 20 to 26.
+
+![](/img/ga_step7.jpg)
