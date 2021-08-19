@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import { Helmet } from 'react-helmet'
 
 function encode(data) {
   return Object.keys(data)
@@ -36,6 +37,13 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet>
+          <title>Contact</title>
+          <meta
+            name="description"
+            content="Please contact us for any comment. We are happy to hear from you."
+          />
+        </Helmet>
         <section className="section">
           <div className="container">
             <div className="content">
