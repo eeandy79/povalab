@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Setup Netlify-CMS for self-hosted blog
-date: 2021-08-19T06:21:34.191Z
+date: 2021-08-18T06:21:34.191Z
 description: How to setup Netify-CMS base on gatsby-starter-netlify-cms template
 featuredpost: true
 featuredimage: /img/netlify-cms-blog-featured-image-02.png
