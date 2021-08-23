@@ -39,7 +39,7 @@ In order to achieve same rate of running, the producer clock frequency must be e
 
 ## Program clock reference (PCR)
 
-The idea using PCR to synchronize upstream device (e.g. encoder) to downstream device (e.g. set-top box) is quite simple. We can imagine each TS packet produced by the upstream device in **real time** will have the PCR value set to device's local time then sent to the network. The downstream device receiving these packets then extract the PCR value and lock/synchronize to the upstream device clock frequency by phase lock loop (PLL) or some regression technique.
+The idea using PCR to synchronize upstream device (e.g. encoder) to downstream device (e.g. set-top box) is quite simple. We can imagine each TS packet produced by the upstream device in **real time** will have the PCR value set to device's local time before sending to the network. The downstream device receiving these packets extract the PCR value and lock/synchronize to the upstream device clock frequency by phase lock loop (PLL) or some regression technique.
 
 To help you sense the concept; here is an example
 
@@ -52,5 +52,6 @@ Base on 3 and 4, from set-top box's perspective
 
 * the local time difference receiving first and second packet is 15
 * the PCR time difference receiving first and second packet is 10
+* i.e. set-top clock have advanced by 15 clock unit but upstream only advance by 10 clock unit as represented by the PCR difference
 
-As a result, the set-top should be able to sense upstream is running slower and reduce the local clock frequency to match the upstream.
+That means the set-top's local clock is running faster than encoder. In order to match upstream clock frequency, the set-top have to reduce the local clock frequency accordingly.
