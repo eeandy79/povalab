@@ -30,11 +30,27 @@ In high level, transmitting digital video/audio system within the broadcast syst
 * Encoder as producer - taking in raw video/audio signal, transcode it and output transport stream to downstream
 * Set-top box as consumer - taking upstream transport stream produced by encoder, decode it back to raw video/audio signal and display on your TV
 
-One criteria for the system to play correctly is to make sure the rate of producing the transport stream equal the rate of consuming it i.e.
+One criteria for the system to play correctly is to make sure the rate of producing the transport stream equal to the rate of consuming it i.e.
 
 * If the rate of encoder producing transport stream is **higher** than the consumption rate of set-top box. Buffer **overflow** will be happened on the set-top box, resulting video or audio data lost on TV
 * If the rate of encoder producing transport stream is **lower** than the consumption rate of set-top box. Buffer **underflow** will be happened on the set-top box, resulting video get stalled on TV
 
-The most critical part resulting same produce and consume rate is to make sure the producer and consumer clock frequency are synchronized
+In order to achieve same rate of running, the producer clock frequency must be equal to the consumer clock frequency, this can be done by synchronizing their clock by some timing protocol. In transport stream or the broadcast domain, this clock synchronization is done by the program clock reference (PCR). 
 
 ## Program clock reference (PCR)
+
+The idea using PCR to synchronize upstream device (e.g. encoder) to downstream device (e.g. set-top box) is quite simple. We can imagine each TS packet produced by the upstream device in **real time** will have the PCR value set to device's local time then sent to the network. The downstream device receiving these packets then extract the PCR value and lock/synchronize to the upstream device clock frequency by phase lock loop (PLL) or some regression technique.
+
+To help you sense the concept; here is an example
+
+1. encoder at local time 10 produce first packet and mark the packet PCR = 10
+2. encoder at local time 20 produce second packet and mark the packet PCR = 20
+3. set-top box receive the first packet with PCR = 10 from upstream at local time 10
+4. set-top box receive the second packet with PCR = 20 from upstream at local time 25
+
+Base on 3 and 4, from set-top box's perspective
+
+* the local time difference receiving first and second packet is 15
+* the PCR time difference receiving first and second packet is 10
+
+As a result, the set-top should be able to sense upstream is running slower and reduce the local clock frequency to match the upstream.
