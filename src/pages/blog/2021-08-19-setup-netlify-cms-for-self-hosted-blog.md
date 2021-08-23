@@ -14,7 +14,7 @@ tags:
 ---
 ![](/img/netlify-cms-blog-featured-image-02.png)
 
-In the last [article](https://andy.povalab.com/blog/2016-12-17-making-sense-of-the-scaas-new-flavor-wheel/), we have gone though to bring up the blog site on Netlify. In this article, we will talk about how to config Netlify-CMS to manage the blog post like create, update, upload image etc.
+In the last [article](https://andy.povalab.com/blog/2021-08-19-start-your-self-hosted-blog-in-30-minutes/), we have gone though to bring up the blog site on Netlify. In this article, we will talk about how to config Netlify-CMS to manage the blog post like create, update, upload image etc.
 
 ## Step 1 - Make sure point to the right branch
 
