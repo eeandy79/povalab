@@ -7,6 +7,13 @@ description: Introduction to MPEG-2 Transport Stream TimeStamp - program clock
 featuredpost: false
 online: true
 featuredimage: https://www.haivision.com/wp-content/uploads/ind_broadcast_hero.jpg
+tags:
+  - MPEG2
+  - PCR
+  - DTS
+  - PTS
+  - TS
+  - broadcast
 ---
 ![](https://www.haivision.com/wp-content/uploads/ind_broadcast_hero.jpg)
 
