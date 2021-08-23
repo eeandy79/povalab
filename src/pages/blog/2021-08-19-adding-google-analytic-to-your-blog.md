@@ -70,6 +70,10 @@ To use Helmet is pretty easy e.g. for the original template code I am using; it 
 
 ## Summary
 
-In this article, we have go through how to add google-analytic for site monitoring and basic SEO via Helmet plugin.
+In this article, we have go through how to add google-analytic for site monitoring and basic SEO via Helmet plugin. The source code can be found here:
 
-Thanks for reading. Please send me an email at povalab@gmail.com for any comment.
+* https://github.com/eeandy79/myblog
+
+The code have included a little bit of enhancement to control if a post is ready for viewer by adding a "online" flag. When the flag is false, the "in progress" post won't shown to your audience.
+
+Thanks for reading. Please send me an email at povalab@gmail.com for any comment or questions. I am very happy to get feedkback from you.
