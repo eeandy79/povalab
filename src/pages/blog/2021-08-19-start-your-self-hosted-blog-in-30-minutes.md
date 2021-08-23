@@ -1,8 +1,10 @@
 ---
 templateKey: blog-post
-title: Start your self-hosted blog in 30 minutes
+title: Start your self-hosted blog in 60 minutes (Part 1)
 date: 2021-08-17T06:22:52.592Z
-description: Start your self-hosted blog in 30 minutes
+description: A step by step guide to start your self-hosted blog in 45 minutes
+  with zero cost on tools and hosting. The setup is based on Gatsby and Netlify
+  and let's get started.
 featuredpost: true
 online: true
 featuredimage: /img/blog.jpg
