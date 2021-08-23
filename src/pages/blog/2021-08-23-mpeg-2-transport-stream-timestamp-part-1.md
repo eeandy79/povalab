@@ -5,7 +5,7 @@ date: 2021-08-23T06:26:28.818Z
 description: Introduction to MPEG-2 Transport Stream TimeStamp - program clock
   reference (PCR), presentation time stamp (PTS) and decoding time stamp (DTS).
 featuredpost: false
-online: false
+online: true
 featuredimage: https://www.haivision.com/wp-content/uploads/ind_broadcast_hero.jpg
 ---
 ![](https://www.haivision.com/wp-content/uploads/ind_broadcast_hero.jpg)
