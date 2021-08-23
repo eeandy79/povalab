@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { DiscussionEmbed } from "disqus-react"
 
 export const BlogPostTemplate = ({
   content,
@@ -13,8 +14,13 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  slug,
 }) => {
   const PostContent = contentComponent || Content
+  const disqusConfig = {
+    shortname: "andy-povalab-com",
+    config: { identifier: slug, title },
+  }
 
   return (
     <section className="section">
@@ -39,6 +45,9 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+            <br/>
+            <br/>
+            <DiscussionEmbed {...disqusConfig} />
           </div>
         </div>
       </div>
@@ -52,6 +61,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  slug: PropTypes.string,
 }
 
 const BlogPost = ({ data }) => {
@@ -74,6 +84,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
       />
     </Layout>
   )
@@ -92,6 +103,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
