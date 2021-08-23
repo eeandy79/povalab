@@ -5,6 +5,7 @@ date: 2021-08-19T06:14:21.551Z
 description: Adding google analytic to your blog with gatsby-plugin-google-gtag
   and gatsby-plugin-react-helmet
 featuredpost: true
+online: true
 featuredimage: /img/ga.jpg
 tags:
   - google-analytic

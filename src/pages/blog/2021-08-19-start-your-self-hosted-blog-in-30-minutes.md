@@ -4,6 +4,7 @@ title: Start your self-hosted blog in 30 minutes
 date: 2021-08-17T06:22:52.592Z
 description: Start your self-hosted blog in 30 minutes
 featuredpost: true
+online: true
 featuredimage: /img/blog.jpg
 tags:
   - Netlify
