@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: MPEG-2 Transport Stream TimeStamp (Part 2)
-date: 2021-08-23T08:38:33.654Z
+date: 2021-08-25T08:04:43.934Z
 description: Introduction to MPEG-2 Transport Stream TimeStamp - program clock
   reference (PCR), presentation time stamp (PTS) and decoding time stamp (DTS).
 featuredpost: false
