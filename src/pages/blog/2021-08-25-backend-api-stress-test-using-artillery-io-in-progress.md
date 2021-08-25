@@ -6,7 +6,7 @@ description: Introduction to MPEG-2 Transport Stream TimeStamp - program clock
   reference (PCR), presentation time stamp (PTS) and decoding time stamp (DTS).
 featuredpost: false
 online: false
-featuredimage: https://www.newscaststudio.com/wp-content/uploads/2019/02/broadcast-automation-NCS.jpg
+featuredimage: https://static.dw.com/image/39492022_303.jpg
 tags:
   - API-Test
   - Artillery.io
@@ -14,7 +14,7 @@ tags:
   - Lambda
   - StressTest
 ---
-![](https://www.newscaststudio.com/wp-content/uploads/2019/02/broadcast-automation-NCS.jpg)
+![](https://static.dw.com/image/39492022_303.jpg)
 
 In the last [article](https://andy.povalab.com/blog/2021-08-23-mpeg-2-transport-stream-timestamp-part-1/), we talk about how to synchronize the clock between upstream (e.g. encoder) and downstream (e.g. set-top box) devices by using the program clock reference (PCR) in the MPEG-2 transport stream. That means all the set-top boxes receiving the TS will run with the **same** clock as the encoder in both value and frequency after clock synchronization.
 
