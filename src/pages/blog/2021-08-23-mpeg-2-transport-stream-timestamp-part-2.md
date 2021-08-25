@@ -7,6 +7,10 @@ description: Introduction to MPEG-2 Transport Stream TimeStamp - program clock
 featuredpost: false
 online: false
 featuredimage: https://www.newscaststudio.com/wp-content/uploads/2019/02/broadcast-automation-NCS.jpg
+tags:
+  - PCR
+  - DTS
+  - PTS
 ---
 ![](https://www.newscaststudio.com/wp-content/uploads/2019/02/broadcast-automation-NCS.jpg)
 
@@ -28,9 +32,9 @@ Every compressed video and audio frames produced and packaged into TS will be ta
 
 Similar to DTS, every compressed video and audio frames are tagged with presentation timestamp (PTS). PTS is used to instruct the decoder when to display the decoded raw video and audio in the frame buffer to the screen.
 
-In real world, DTS is required only if **frame re-ordering** happen i.e. the order of frame transmission is different from the order they display on the TS. This happened on compressed video like AVC or HEVC when B-frame is used to improve the compression efficiency.
+In real world, DTS is required only if **frame re-ordering** happen i.e. the order of frame transmission is different from the order they display on the TS. This happened on compressed video like AVC or HEVC when B-frame is used to improve the compression efficiency where time to decode and present the compressed video frame is different.
 
-For the example below, 
+For the example below, the first P frame have been re-ordered and packaged right after the first I-frame in the TS which will be decoded at DTS = 1 and presented at PTS = 3.
 
 ![](https://1.bp.blogspot.com/-USpO9dddbRo/Xx9-vt7sJdI/AAAAAAAAGKA/5YrWd2dWoMAF8eZfFftKoxEF-tep5nqMQCLcBGAsYHQ/s1600/ts.jpg)
 
@@ -38,6 +42,6 @@ For compressed audio or video without B-frame; we can skip DTS to save some band
 
 ## Summary
 
-In this article , we have gone though the idea in MPEG-2 Transport Stream to synchronize the clock between upstream and downstream via program clock reference (PCR). In the next article, we will talk about how presentation (PTS) and decoding timestamp (DTS) work base on the synchronized time base.
+In this article, we have talked about using PTS and DTS to control when to decode and present compressed video and audio frames on the decoder side. For PTS and DTS work properly, the decoder need to synchronized the local clock with the input TS via PCR.
 
-Thanks for reading. Please send me an email at povalab@gmail.com for any comment or questions. I am very happy to get feedkback from you.
+Thanks for reading. Please send me an email at povalab@gmail.com for any comment or questions. I am very happy to get feedback from you.
