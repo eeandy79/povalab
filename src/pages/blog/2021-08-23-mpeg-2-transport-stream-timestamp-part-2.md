@@ -24,9 +24,17 @@ Every compressed video and audio frames produced and packaged into TS will be ta
 
 ![](https://d3i71xaburhd42.cloudfront.net/2d26e07fe9d8c3b881a2334e3f53761d374456ed/4-Figure5-1.png)
 
+## Presentation timestamp (PTS)
 
+Similar to DTS, every compressed video and audio frames are tagged with presentation timestamp (PTS). PTS is used to instruct the decoder when to display the decoded raw video and audio in the frame buffer to the screen.
 
+In real world, DTS is required only if **frame re-ordering** happen i.e. the order of frame transmission is different from the order they display on the TS. This happened on compressed video like AVC or HEVC when B-frame is used to improve the compression efficiency.
 
+For 
+
+![](https://1.bp.blogspot.com/-USpO9dddbRo/Xx9-vt7sJdI/AAAAAAAAGKA/5YrWd2dWoMAF8eZfFftKoxEF-tep5nqMQCLcBGAsYHQ/s1600/ts.jpg)
+
+For compressed audio or video without B-frame; we can skip DTS to save some bandwidth in transmission.
 
 ## Summary
 
