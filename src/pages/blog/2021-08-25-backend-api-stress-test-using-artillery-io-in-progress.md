@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Backend API stress test using artillery.io (in progress)
+title: Load testing your backend with Artillery.io
 date: 2021-08-25T08:54:42.653Z
 description: Introduction to MPEG-2 Transport Stream TimeStamp - program clock
   reference (PCR), presentation time stamp (PTS) and decoding time stamp (DTS).
@@ -8,9 +8,11 @@ featuredpost: false
 online: false
 featuredimage: https://www.newscaststudio.com/wp-content/uploads/2019/02/broadcast-automation-NCS.jpg
 tags:
-  - PCR
-  - DTS
-  - PTS
+  - API-Test
+  - Artillery.io
+  - AWS
+  - Lambda
+  - StressTest
 ---
 ![](https://www.newscaststudio.com/wp-content/uploads/2019/02/broadcast-automation-NCS.jpg)
 
