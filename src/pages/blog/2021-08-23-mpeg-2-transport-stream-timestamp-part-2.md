@@ -30,7 +30,7 @@ Similar to DTS, every compressed video and audio frames are tagged with presenta
 
 In real world, DTS is required only if **frame re-ordering** happen i.e. the order of frame transmission is different from the order they display on the TS. This happened on compressed video like AVC or HEVC when B-frame is used to improve the compression efficiency.
 
-For 
+For the example below, 
 
 ![](https://1.bp.blogspot.com/-USpO9dddbRo/Xx9-vt7sJdI/AAAAAAAAGKA/5YrWd2dWoMAF8eZfFftKoxEF-tep5nqMQCLcBGAsYHQ/s1600/ts.jpg)
 
