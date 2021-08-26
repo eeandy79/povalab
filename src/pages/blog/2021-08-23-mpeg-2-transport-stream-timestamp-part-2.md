@@ -16,7 +16,7 @@ tags:
 
 In the last [article](https://andy.povalab.com/blog/2021-08-23-mpeg-2-transport-stream-timestamp-part-1/), we talk about how to synchronize the clock between upstream (e.g. encoder) and downstream (e.g. set-top box) devices by using the program clock reference (PCR) in the MPEG-2 transport stream. That means all the set-top boxes receiving the TS will run with the **same** clock as the encoder in both value and frequency after clock synchronization.
 
-Given they are running with **same** clock, we are going to talk about decoding and presentation timestamp in the MPEG-2 TS.
+Given they are running with **same** clock, we can talk about decoding and presentation timestamp in the MPEG-2 TS.
 
 ## Decoding timestamp (DTS)
 
