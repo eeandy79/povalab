@@ -89,11 +89,35 @@ export const IndexPageTemplate = ({
                 <div className="columns mt-5">
                   <div className="column is-12">
                     <h1 className="title">
+                      Latest Projects
+                    </h1>
+                    <table>
+                      <tr>
+                        <th width="120px">Date</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <th>14-Sep-2021</th>
+                        <td><p>Official launch - Email TaiKoo Primary School homework to parents everyday. Subscribed at <a href="https://tpshw.povalab.com">https://tpshw.povalab.com</a>.</p></td>
+                      </tr>
+                      <tr>
+                        <th>10-Sep-2021</th>
+                        <td><p>Official launch - NO cost hosting with CMS support at <a href="https://jha.com.hk">https://jha.com.hk</a>. Feel free to contact us at povalab@gmail.com.</p></td>
+                      </tr>
+                    </table>
+
+                  </div>
+                </div>
+
+                <div className="columns mt-5">
+                  <div className="column is-12">
+                    <h1 className="title">
                       {heading}
                     </h1>
                     <p>{description}</p>
                   </div>
                 </div>
+
                 <Features gridItems={intro.blurbs} />
                 {/*
                 <div className="columns">
@@ -104,6 +128,7 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 */}
+
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories
